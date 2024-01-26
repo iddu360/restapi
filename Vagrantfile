@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/xenial64"
+  config.vm.box = "ubuntu/focal64"
 
   config.vm.network "forwarded_port", host_ip: "127.0.0.1", guest: 8080, host: 8080
 
@@ -26,7 +26,7 @@ Vagrant.configure("2") do |config|
     sudo locale-gen en_GB.UTF-8
 
     # Install Python, SQLite and pip
-    sudo apt-get install -y python3-dev sqlite python-pip
+    sudo apt-get install -y python3-dev python3 sqlite python3-pip
 
     # Upgrade pip to the latest version.
     sudo pip install --upgrade pip
